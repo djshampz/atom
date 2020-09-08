@@ -14,11 +14,10 @@ data = '''<stuff>
 
 tree = ET.fromstring(data)
 lst = tree.findall('users/user')
-print(lst)
 
 print('User count', len(lst))
 
 for item in lst:
     print('Name: ', item.find('name').text)
-    print('id: ', item.find('id').text)
+    print('id: ', item.find('Id').text)
     print('Attribute: ', item.get('x'))
